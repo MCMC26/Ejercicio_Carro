@@ -24,6 +24,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 var cars = [];
+var index = 0;
 
 // definir ruta tipo get y su acción
 app.get('/', (request, response) => {
@@ -35,20 +36,29 @@ app.get('/api/car', (request, response) => {
     response.send(cars);
 })
 app.post('/api/car', (request, response) => {
-    console.log(request.body);
-    cars.push(request.body);
+    let product = request.body;
+    index += 1;
+    product.id = index;
+    cars.push(product);
     response.send({
-        message: 'ok',
+        product:product,
+        message: 'ok'
     });
 });
 
 app.delete('/api/car', (request, response) => {
-    console.log(request.body);
-    var index = request.body.indexToDelete;
-    cars.splice(parseInt(index),1);
+    let number = request.body.id;
+
+    cars.forEach((c)=>{
+        if(number == c.id){
+            cars.splice(c, 1);
+        }
+    });
+
     response.send({
         message: 'deleted',
     });
+
 });
 
 app.put('/api/car', (request, response) => {

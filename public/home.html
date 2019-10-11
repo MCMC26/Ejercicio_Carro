@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>EJERCICIO CARRO</title>
+    <link rel="stylesheet" href="/styles/main.css">
 </head>
+
 <body>
     <h1>Productos</h1>
 
 
-    <form>
+    <form id="order">
         <label for="Car-form-brand">Marca del carro</label>
         <input type="text" name="brand" id="Car-form-brand">
         <br>
         <label for="Car-form-rims">Número de llantas</label>
-        <input type="range" name="rims" id="people-form-rims">
+        <input type="range" max="20" name="rims" id="people-form-rims">
         <br>
         <label for="Car-form-color">Color</label>
         <input type="color" name="color" id="Car-form-color">
@@ -23,7 +26,96 @@
         <button type="submit">Enviar</button>
     </form>
 
+    <div class="listProduct">
+
+    </div>
+
+    <!--
+    <div class="template horizontal">
+        <div class="template__propiedades">
+            <div class="horizontal propiedad">
+
+                <div class="color__title">
+                    <h1>Marca:</h1>
+                </div>
+                <div class="color__color">
+
+                </div>
+            </div>
+            <div class="horizontal propiedad">
+
+                <div class="color__title">
+                    <h2>Llantas:</h2>
+                </div>
+                <div class="color__color">
+
+                </div>
+            </div>
+            <div class="color horizontal propiedad">
+                <div class="color__title">
+                    <h2>Color:</h2>
+                </div>
+                <div class="color__color">
+                    <div style="background: black;" class="color__color__view"></div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="template__acciones">
+            <button class="delete btn">
+                eliminar
+            </button>
+            <button class="edited btn">
+                editar
+            </button>
+
+        </div>
+    </div>
+
+
+    <div class="template horizontal">
+        <div class="template__propiedades">
+            <div class="horizontal propiedad">
+
+                <div class="color__title">
+                    <h1>Marca:</h1>
+                </div>
+                <div class="color__color">
+                        <input class="input__edit" type="text" placeholder="Texto" />
+                </div>
+            </div>
+            <div class="horizontal propiedad">
+
+                <div class="color__title">
+                    <h2>Llantas:</h2>
+                </div>
+                <div class="color__color horizontal">
+                    <input class="input__edit" type="range" placeholder="Texto" />
+                    <div>0</div>
+                </div>
+            </div>
+            <div class="color horizontal propiedad">
+                <div class="color__title">
+                    <h2>Color:</h2>
+                </div>
+                <div class="color__color">
+                    <input class="input__edit" type="color"/>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="template__acciones">
+            <button class="delete btn">
+                Confirmar
+            </button>
+
+        </div>
+    </div>
+-->
     <script src="/scripts/home.js"></script>
-    
+
 </body>
+
 </html>

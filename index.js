@@ -62,7 +62,17 @@ app.delete('/api/car', (request, response) => {
 });
 
 app.put('/api/car', (request, response) => {
- var elementToEdit
+    let product = JSON.parse(request.body.product);
+
+    cars.forEach((c)=>{
+        if(product.id == c.id){
+            c.brand = product.brand;
+            c.rims = product.rims;
+            c.color = product.color;
+    
+        }
+    });
+
     response.send({
         message: 'modificated',
     });

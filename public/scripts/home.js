@@ -70,6 +70,7 @@ window.addEventListener("load", () => {
 
     view_delete.addEventListener("click", () => {
       removeProduct(product.id);
+
       listProduct.remove(product.view);
     });
 
